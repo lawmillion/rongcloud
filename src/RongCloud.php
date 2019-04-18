@@ -11,8 +11,6 @@ use RongCloud\Lib\Message\Message;
 use RongCloud\Lib\Sensitive\Sensitive;
 use RongCloud\Lib\User\User;
 
-error_reporting(0);
-
 class RongCloud
 {
     /**
