@@ -20,13 +20,16 @@ $ composer require lawmil/rongcloud
 
 ## 使用方法
 ```php
-include 'RongCloud.php';
 $appKey = 'appKey';
 $appSecret = 'appSecret';
-$jsonPath = "jsonsource/";
 ...
-    $rongCloud = new \RongCloud\RongCloud($appKey,$appSecret);
-    $token = $rongCloud->user()->getToken('userId1', 'username', 'http://www.rongcloud.cn/images/logo.png');;
+    $rongCloud = new RongCloud($appKey,$appSecret);
+    $user = [
+        'id'=> '用户id',
+        'name'=> '用户名称',
+        'portrait'=> '用户头像'
+    ];
+    $token = $rongCloud->getUser()->register($user);
 ...
 ```
 
